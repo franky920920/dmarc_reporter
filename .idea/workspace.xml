@@ -1,8 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;aws&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/incoming-email/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/__tests__/unit/handlers/sns-payload-logger.test.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/__tests__/unit/handlers/sns-payload-logger.test.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/buildspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/events/event-sns.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/events/event-sns.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/samconfig.toml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/samconfig.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/src/handlers/sns-payload-logger.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/app/simpleForm/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/simpleForm/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2cU8bQKjD7A5y8CKkw1INrfcB5c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/franky/workspace/CSCA5028/dmarc_reporter/incoming-email/src/handlers/models",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "aws",
+    "ts.external.directory.path": "/Users/franky/workspace/CSCA5028/dmarc_reporter/web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/incoming-email/src/handlers/models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/incoming-email" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="" />
+      <created>1708154867933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708154867933</updated>
+      <workItem from="1708154869055" duration="30323000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>

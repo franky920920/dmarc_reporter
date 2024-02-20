@@ -27,20 +27,17 @@ export default function Page() {
 	return (
 		<ContentLayout>
 			<Container>
-				<Form>
-
-					<SpaceBetween size={"m"}>
-						<FormField label={"Type below"}>
-							<Input value={input} onChange={(event) => setInput(event.detail.value)}/>
-						</FormField>
-						<Button onClick={() => {
-							setDisplay(input)
-						}}>
-							Submit
-						</Button>
-						<Box variant={"h3"}>Your input is: {display}</Box>
-					</SpaceBetween>
-				</Form>
+				<SpaceBetween size={"m"}>
+					<FormField label={"Type below"}>
+						<Input value={input} onChange={(event) => setInput(event.detail.value)}/>
+					</FormField>
+					<Button onClick={() => {
+						setDisplay(input)
+					}}>
+						Submit
+					</Button>
+					<Box variant={"h3"}>Your input is: {display}</Box>
+				</SpaceBetween>
 			</Container>
 		</ContentLayout>
 	)
