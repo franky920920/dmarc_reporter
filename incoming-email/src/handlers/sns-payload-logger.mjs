@@ -2,18 +2,20 @@ import parse from "emailjs-mime-parser";
 import {TextWriter, Uint8ArrayReader, ZipReader} from "@zip.js/zip.js";
 import xmljs from "xml2js"
 import Model, {Report, Item} from "./database.js"
-
+import * as Zlib from "zlib";
 
 export const snsPayloadLoggerHandler = async (event, context) => {
+	// console.debug(JSON.stringify(event))
 	// parse email message
 	let mine = atob(JSON.parse(event.Records[0].Sns.Message).content)
 	mine = parse.default(mine)
 
 	// get report email information
-	const reporter = mine.headers.from[0].value
+	const reporter = mine.headers.from[0].value[0].address
 	// noinspection JSPotentiallyInvalidTargetOfIndexedPropertyAccess
-	const receiver = mine.headers.to[0].value
+	const receiver = mine.headers.to[0].value[0].address
 	const children = mine.childNodes
+	console.log(mine.childNodes)
 
 	let xml = await mimeProcessor(children)
 
@@ -29,22 +31,32 @@ export const snsPayloadLoggerHandler = async (event, context) => {
 
 async function mimeProcessor(children) {
 	for (let child of children) {
-		if (["application/zip", // .zip -> google
-			"application/gzip", // .gz -> yahoo, amazon, microsoft
-		].indexOf(child.contentType.value) > -1) {
+		console.log(child.contentType.value)
+		if (child.contentType.value === 'application/zip') {
 			try {
+				console.log("Processing zip archive")
 				let zipReader = new ZipReader(new Uint8ArrayReader(child.content))
 				let zipEntries = (await zipReader.getEntries()).shift()
-
 				return await zipEntries.getData(new TextWriter())
+				// const buffer = new Buffer.from(child.content)
+				// const unzip = new Zlib.inflateSync(buffer)
+				// return unzip.toString()
 			} catch (e) {
 				console.error(e)
 				throw e
 			}
 		}
+		if (child.contentType.value === 'application/gzip') {
+			console.log("Processing gunzip xml")
+			const buffer = new Buffer.from(child.content)
+			const unzip = new Zlib.gunzipSync(buffer)
+			return unzip.toString()
+		}
 		if (["application/xml", "text/xml"].indexOf(child.contentType.value) > -1) {
+			console.log("Processing plain xml file")
 			return new TextDecoder().decode(child.content)
 		}
+		console.log("skipped file")
 	}
 }
 
@@ -60,7 +72,6 @@ async function insertDMARCReport(report) {
 		const dt_end = new Date(metadata.date_range[0].end[0] * 1000).toISOString().replace('T', ' ').replace('Z', '');
 
 		const pct = policy.pct[0];
-
 		await Report.query(trx).insert({
 			report_id: metadata.report_id[0],
 			report_begin_date: dt_begin,
@@ -71,7 +82,7 @@ async function insertDMARCReport(report) {
 			report_policy_adkim: policy.adkim[0],
 			report_policy_aspf: policy.aspf[0],
 			report_policy_p: policy.p[0],
-			report_policy_sp: policy.sp[0],
+			report_policy_sp: policy.sp?.[0] ?? null, // yahoo did not report this
 			report_policy_pct: parseInt(pct),
 		});
 

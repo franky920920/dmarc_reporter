@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  dmarc-api
+Transform:
+- AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Environment:
+      Variables:
+        DB_HOST: dev-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
+        DB_PASSWORD: REPLACE_THIS
+        DB_PORT: 3306
+        DB_USER: admin
+    Runtime: nodejs20.x
+    Architectures:
+      - arm64
+    MemorySize: 128
+    Timeout: 300
+
+Resources:
+  APIGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      MethodSettings: # enables cloudwatch metrics and logs, relies on account-level role setting
+        - LoggingLevel: ERROR
+          MetricsEnabled: True
+          ResourcePath: '/*' # allows for logging on any resource
+          HttpMethod: '*' # allows for logging on any method
+      Cors:
+        AllowMethods: "'GET, POST, OPTIONS'"
+        AllowOrigin: "'http://localhost:3000, https://main.d1rav4b7j6juh6.amplifyapp.com/'"
+        AllowHeaders: "'authorization, Content-type, x-api-key, x-amz-security-token, x-amz-date, x-amz-target'"
+  getAllDomainsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/get-all-domains.handler
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /domains
+            Method: GET
+            RestApiId: !Ref APIGateway
+
+
+
+Outputs:
+  WebEndpoint:
+    Description: API Gateway endpoint URL for Prod stage
+    Value: !Sub "https://${APIGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
