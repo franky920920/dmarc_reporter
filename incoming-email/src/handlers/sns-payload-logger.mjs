@@ -21,6 +21,8 @@ export const snsPayloadLoggerHandler = async (event, context) => {
 		// parse xml string
 		const report = await xmljs.parseStringPromise(xml, {})
 		await insertDMARCReport(report)
+	} else {
+		console.warn(`Email from ${reporter} doesn't seems having valid DMARC report. ignoring.`)
 	}
 
 }
@@ -74,8 +76,6 @@ async function insertDMARCReport(report) {
 		});
 
 		for (const item of feedback.record) {
-			console.log(JSON.stringify(item, null, 4))
-
 			const dd = item.auth_results[0].dkim?.[0].domain[0] ?? null
 			const dr = item.auth_results[0].dkim?.[0].result[0] ?? null
 

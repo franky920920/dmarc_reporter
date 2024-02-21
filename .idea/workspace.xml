@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/incoming-email/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/__tests__/unit/handlers/sns-payload-logger.test.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/__tests__/unit/handlers/sns-payload-logger.test.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/buildspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/events/event-sns.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/events/event-sns.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/samconfig.toml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/samconfig.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/src/handlers/sns-payload-logger.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/incoming-email/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/app/simpleForm/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/app/simpleForm/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +47,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "settings.editor.selected.configurable": "aws",
-    "ts.external.directory.path": "/Users/franky/workspace/CSCA5028/dmarc_reporter/web/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/franky/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708154867933</updated>
-      <workItem from="1708154869055" duration="30323000" />
+      <workItem from="1708154869055" duration="31829000" />
     </task>
     <servers />
   </component>
