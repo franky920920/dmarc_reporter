@@ -9,7 +9,7 @@ Globals:
     Environment:
       Variables:
         DB_HOST: dev-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
-        DB_PASSWORD: REPLACE_THIS
+        DB_PASSWORD: REPLACE_ME
         DB_PORT: 3306
         DB_USER: admin
     Runtime: nodejs20.x
@@ -43,8 +43,6 @@ Resources:
             Path: /domains
             Method: GET
             RestApiId: !Ref APIGateway
-
-
 
 Outputs:
   WebEndpoint:
