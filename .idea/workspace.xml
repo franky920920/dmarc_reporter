@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__tests__/unit/handlers/get-all-items.test.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__tests__/unit/handlers/get-by-id.test.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/__tests__/unit/handlers/put-item.test.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/buildspec.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/env.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/events/event-get-all-items.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/events/event-get-by-id.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/events/event-post-item.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/samconfig.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/handlers/database.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/handlers/get-all-domains.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/handlers/get-all-items.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/handlers/get-by-id.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/handlers/put-item.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/template.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/events/g2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/events/g3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/events/microsoft.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incoming-email/events/yahoo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/events/event-sns.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/events/google.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/events/g2.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/events/g2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/events/google.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/events/google.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/src/handlers/sns-payload-logger.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +93,7 @@
       <updated>1708154867933</updated>
       <workItem from="1708154869055" duration="37700000" />
       <workItem from="1708508135277" duration="982000" />
-      <workItem from="1708509135969" duration="2308000" />
+      <workItem from="1708509135969" duration="5223000" />
     </task>
     <servers />
   </component>

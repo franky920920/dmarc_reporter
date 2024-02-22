@@ -3,21 +3,23 @@ import {TextWriter, Uint8ArrayReader, ZipReader} from "@zip.js/zip.js";
 import xmljs from "xml2js"
 import Model, {Report, Item} from "./database.js"
 import * as Zlib from "zlib";
+import {simpleParser} from  'mailparser'
 
 export const snsPayloadLoggerHandler = async (event, context) => {
 	// console.debug(JSON.stringify(event))
 	// parse email message
 	let mine = atob(JSON.parse(event.Records[0].Sns.Message).content)
-	mine = parse.default(mine)
+	// mine = parse.default(mine)
+	let parsed = await simpleParser(mine)
 
 	// get report email information
-	const reporter = mine.headers.from[0].value[0].address
+	// const reporter = mine.headers.from[0].value[0].address
+	const reporter = parsed.from.value[0].address
 	// noinspection JSPotentiallyInvalidTargetOfIndexedPropertyAccess
-	const receiver = mine.headers.to[0].value[0].address
-	const children = mine.childNodes
-	console.log(mine.childNodes)
+	const receiver = parsed.to.value[0].address
+	// const children = mine.childNodes
 
-	let xml = await mimeProcessor(children)
+	let xml = await mimeProcessor(parsed.attachments)
 
 	if (xml) {
 		// parse xml string
@@ -31,22 +33,22 @@ export const snsPayloadLoggerHandler = async (event, context) => {
 
 async function mimeProcessor(children) {
 	for (let child of children) {
-		console.log(child.contentType.value)
-		if (child.contentType.value === 'application/zip') {
+		console.log(child.contentType, child)
+		if (child.contentType === 'application/zip') {
 			try {
 				console.log("Processing zip archive")
-				let zipReader = new ZipReader(new Uint8ArrayReader(child.content))
-				let zipEntries = (await zipReader.getEntries()).shift()
-				return await zipEntries.getData(new TextWriter())
-				// const buffer = new Buffer.from(child.content)
-				// const unzip = new Zlib.inflateSync(buffer)
-				// return unzip.toString()
+				// let zipReader = new ZipReader(new Uint8ArrayReader(child.content))
+				// let zipEntries = (await zipReader.getEntries()).shift()
+				// return await zipEntries.getData(new TextWriter())
+				const buffer = new Buffer.from(child.content)
+				const unzip = new Zlib.inflateSync(buffer)
+				return unzip.toString()
 			} catch (e) {
 				console.error(e)
 				throw e
 			}
 		}
-		if (child.contentType.value === 'application/gzip') {
+		if (child.contentType === 'application/gzip') {
 			console.log("Processing gunzip xml")
 			const buffer = new Buffer.from(child.content)
 			const unzip = new Zlib.gunzipSync(buffer)
