@@ -16,6 +16,10 @@ export function SideNav() {
 			items={[
 				{
 					type: "link",
+					text: 'Dashboard',
+					href: "/dashboard"
+				},{
+					type: "link",
 					text: 'First page - simple form',
 					href: "/simpleForm"
 				}
