@@ -5,35 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/buildspec.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build.toml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/database.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/database.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/get-all-items.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/get-by-id.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/get-overview.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/get-overview.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/src/handlers/put-item.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getAllDomainsFunction/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/database.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/database.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/get-all-items.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/get-by-id.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/get-overview.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/get-overview.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/src/handlers/put-item.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/getOverviewFunction/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.aws-sam/build/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/.aws-sam/build/template.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/buildspec.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/handlers/database.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/handlers/database.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/handlers/get-overview.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/handlers/get-overview.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/web/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incoming-email/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/buildspec.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/buildspec.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/buildspec.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +121,7 @@
       <updated>1708154867933</updated>
       <workItem from="1708154869055" duration="37700000" />
       <workItem from="1708508135277" duration="982000" />
-      <workItem from="1708509135969" duration="34305000" />
+      <workItem from="1708509135969" duration="34697000" />
     </task>
     <servers />
   </component>
