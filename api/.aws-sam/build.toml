@@ -7,6 +7,6 @@ architecture = "arm64"
 handler = "src/handlers/get-all-items.getAllItemsHandler"
 manifest_hash = "d2cb05e818f50067cff8d36f30d7af6c"
 packagetype = "Zip"
-functions = ["getAllDomainsFunction"]
+functions = ["getAllDomainsFunction", "getOverviewFunction"]
 
 [layer_build_definitions]

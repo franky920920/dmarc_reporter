@@ -5,22 +5,32 @@ Description: >-
 Transform:
 - AWS::Serverless-2016-10-31
 
+Globals:
+  Function:
+    Environment:
+      Variables:
+        DB_HOST: dev-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
+        DB_PASSWORD: REPLACE_ME
+        DB_PORT: 3306
+        DB_USER: admin
+    Runtime: nodejs20.x
+    Architectures:
+      - arm64
+    VpcConfig:
+      SecurityGroupIds:
+        - sg-0142b53f3b0046106
+      SubnetIds:
+        - subnet-0c257c81e79d8cc95
+        - subnet-074d708ce23d0d4a8
+
 Resources:
   SNSPayloadLogger:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: nodejs20.x
-      Architectures:
-        - arm64
       Handler: src/handlers/sns-payload-logger.snsPayloadLoggerHandler
       MemorySize: 512
       Timeout: 100
       Policies:
-        # Give Lambda basic execution Permission to the helloFromLambda
         - AWSLambdaBasicExecutionRole
-      Environment:
-        Variables:
-          DB_HOST: dev-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
-          DB_PASSWORD: REPLACE_ME
-          DB_PORT: 3306
-          DB_USER: admin
+        - arn:aws:iam::490387937525:policy/lambdaCreateNetworkInterface

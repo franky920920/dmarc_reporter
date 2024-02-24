@@ -21,6 +21,13 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+    "node_modules/typescript/lib/lib.es5.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

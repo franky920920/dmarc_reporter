@@ -28,7 +28,7 @@ export const snsPayloadLoggerHandler = async (event, context) => {
 
 }
 
-async function mimeProcessor(children) {
+export async function mimeProcessor(children) {
 	for (let child of children) {
 		console.log(child.contentType)
 		if (child.contentType === 'application/zip') {

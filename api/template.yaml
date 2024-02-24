@@ -17,6 +17,12 @@ Globals:
       - arm64
     MemorySize: 128
     Timeout: 300
+    VpcConfig:
+      SecurityGroupIds:
+        - sg-0142b53f3b0046106
+      SubnetIds:
+        - subnet-0c257c81e79d8cc95
+        - subnet-074d708ce23d0d4a8
 
 Resources:
   APIGateway:
@@ -30,12 +36,15 @@ Resources:
           HttpMethod: '*' # allows for logging on any method
       Cors:
         AllowMethods: "'GET, POST, OPTIONS'"
-        AllowOrigin: "'http://localhost:3000, https://main.d1rav4b7j6juh6.amplifyapp.com/'"
+        AllowOrigin: "'*'"
         AllowHeaders: "'authorization, Content-type, x-api-key, x-amz-security-token, x-amz-date, x-amz-target'"
   getAllDomainsFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/get-all-domains.handler
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - arn:aws:iam::490387937525:policy/lambdaCreateNetworkInterface
       Events:
         Api:
           Type: Api
@@ -43,8 +52,22 @@ Resources:
             Path: /domains
             Method: GET
             RestApiId: !Ref APIGateway
+  getOverviewFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/get-overview.handler
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - arn:aws:iam::490387937525:policy/lambdaCreateNetworkInterface
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /overview
+            Method: GET
+            RestApiId: !Ref APIGateway
 
 Outputs:
   WebEndpoint:
-    Description: API Gateway endpoint URL for Prod stage
-    Value: !Sub "https://${APIGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+    Description: API Gateway endpoint URL for prod stage
+    Value: !Sub "https://${APIGateway}.execute-api.${AWS::Region}.amazonaws.com/prod/"

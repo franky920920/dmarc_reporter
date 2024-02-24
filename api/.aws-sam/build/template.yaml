@@ -7,7 +7,7 @@ Globals:
     Environment:
       Variables:
         DB_HOST: dev-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
-        DB_PASSWORD: REPLACE_THIS
+        DB_PASSWORD: nCfo6V=rozdpMlho%nTA
         DB_PORT: 3306
         DB_USER: admin
     Runtime: nodejs20.x
@@ -15,6 +15,12 @@ Globals:
     - arm64
     MemorySize: 128
     Timeout: 300
+    VpcConfig:
+      SecurityGroupIds:
+      - sg-0142b53f3b0046106
+      SubnetIds:
+      - subnet-0c257c81e79d8cc95
+      - subnet-074d708ce23d0d4a8
 Resources:
   APIGateway:
     Type: AWS::Serverless::Api
@@ -27,13 +33,16 @@ Resources:
         HttpMethod: '*'
       Cors:
         AllowMethods: '''GET, POST, OPTIONS'''
-        AllowOrigin: '''http://localhost:3000, https://main.d1rav4b7j6juh6.amplifyapp.com/'''
+        AllowOrigin: '''*'''
         AllowHeaders: '''authorization, Content-type, x-api-key, x-amz-security-token,
           x-amz-date, x-amz-target'''
   getAllDomainsFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/get-all-domains.handler
+      Policies:
+      - AWSLambdaBasicExecutionRole
+      - arn:aws:iam::490387937525:policy/lambdaCreateNetworkInterface
       Events:
         Api:
           Type: Api
@@ -45,8 +54,26 @@ Resources:
       CodeUri: getAllDomainsFunction
     Metadata:
       SamResourceId: getAllDomainsFunction
+  getOverviewFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/get-overview.handler
+      Policies:
+      - AWSLambdaBasicExecutionRole
+      - arn:aws:iam::490387937525:policy/lambdaCreateNetworkInterface
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /overview
+            Method: GET
+            RestApiId:
+              Ref: APIGateway
+      CodeUri: getOverviewFunction
+    Metadata:
+      SamResourceId: getOverviewFunction
 Outputs:
   WebEndpoint:
-    Description: API Gateway endpoint URL for Prod stage
+    Description: API Gateway endpoint URL for prod stage
     Value:
-      Fn::Sub: https://${APIGateway}.execute-api.${AWS::Region}.amazonaws.com/Prod/
+      Fn::Sub: https://${APIGateway}.execute-api.${AWS::Region}.amazonaws.com/prod/
