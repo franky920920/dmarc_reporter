@@ -1,5 +1,9 @@
 version: 0.2
 
+cache:
+  paths:
+    - incoming-email/node_modules/**/*
+    - incoming-email/.aws-sam/cache/**/*
 phases:
   install:
     commands:

@@ -1,4 +1,9 @@
 version: 0.2
+
+cache:
+  paths:
+    - api/node_modules/**/*
+    - api/.aws-sam/cache/**/*
 phases:
   install:
     commands:
