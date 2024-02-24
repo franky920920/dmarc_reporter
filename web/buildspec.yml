@@ -12,4 +12,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - out/*
+    - web/out/*
