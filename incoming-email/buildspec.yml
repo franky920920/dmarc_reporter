@@ -21,6 +21,6 @@ phases:
 artifacts:
   type: zip
   files:
-    - template-export.yml
+    - incoming-email/template-export.yml
 
 
