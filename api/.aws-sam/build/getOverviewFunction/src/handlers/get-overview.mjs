@@ -47,5 +47,4 @@ export const handler = async (event) => {
 	}
 }
 
-await handler({}).then(r => console.log(r))
 

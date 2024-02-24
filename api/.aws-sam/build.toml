@@ -5,7 +5,7 @@ codeuri = "/Users/franky/workspace/CSCA5028/dmarc_reporter/api"
 runtime = "nodejs20.x"
 architecture = "arm64"
 handler = "src/handlers/get-all-items.getAllItemsHandler"
-manifest_hash = "d2cb05e818f50067cff8d36f30d7af6c"
+manifest_hash = "7876f8b5c9e5c8bb6e6e19904c1fa14c"
 packagetype = "Zip"
 functions = ["getAllDomainsFunction", "getOverviewFunction"]
 
