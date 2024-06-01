@@ -9,6 +9,7 @@ const client = new SecretsManagerClient({
   region: "us-east-1",
 });
 
+console.log("Retrieving secret from Secrets Manager");
 let response = await client.send(
   new GetSecretValueCommand({
     SecretId: process.env.DB_SECRET_NAME,
@@ -17,6 +18,7 @@ let response = await client.send(
 
 const secret = JSON.parse(response.SecretString);
 
+console.log("Connecting to database");
 const knex = Knex({
   client: "mysql2",
   useNullAsDefault: true,
