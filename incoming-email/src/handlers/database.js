@@ -11,7 +11,7 @@ const client = new SecretsManagerClient({
 
 let response = await client.send(
  new GetSecretValueCommand({
-	 SecretId: process.env.SECRET_NAME,
+	 SecretId: process.env.DB_SECRET_NAME,
  }),
 );
 
@@ -25,7 +25,7 @@ const knex = Knex({
 		port: process.env.DB_PORT,
 		user: secret.username,
 		password: secret.password,
-		database: "dmarc2",
+		database: process.env.DB_NAME,
 		timezone: "+00:00",
 	},
 });
