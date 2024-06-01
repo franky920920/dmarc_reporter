@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1328930-c693-4875-b81a-64790d9a27bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/__tests__/unit/handlers/get-all-domains.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/auth/signIn/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/auth/signOut/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__tests__/unit/handlers/get-all-items.test.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__tests__/unit/handlers/get-by-id.test.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__tests__/unit/handlers/put-item.test.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/handlers/database.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/handlers/database.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/src/handlers/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/incoming-email/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/incoming-email/template.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +56,7 @@
     "npm.test.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/Users/franky/workspace/cuboulder/CSCA5028/dmarc_reporter/web/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/franky/workspace/CSCA5028/dmarc_reporter/web/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/franky/workspace/cuboulder/CSCA5028/dmarc_reporter/web/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -136,7 +127,7 @@
       <workItem from="1708509135969" duration="44340000" />
       <workItem from="1710057646967" duration="773000" />
       <workItem from="1710058438751" duration="18000" />
-      <workItem from="1717255862825" duration="437000" />
+      <workItem from="1717255862825" duration="1333000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ Globals:
     Architectures:
       - arm64
     MemorySize: 128
-    Timeout: 10
+    Timeout: 3
     VpcConfig:
       SecurityGroupIds:
         - sg-022d777129fddf499
@@ -21,7 +21,7 @@ Globals:
       Variables:
         DB_HOST: central-db.cqcgwq24flgj.us-east-1.rds.amazonaws.com
         DB_PORT: 3306
-        DB_NAME: main
+        DB_NAME: dmarc2
         DB_SECRET_NAME: arn:aws:secretsmanager:us-east-1:490387937525:secret:rds!db-acadcb8b-7e88-4088-9336-3ff6aaf0350d-WPzWMv
 
 Resources:
