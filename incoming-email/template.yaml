@@ -12,7 +12,7 @@ Globals:
       - arm64
     VpcConfig:
       SecurityGroupIds:
-        - sg-022d777129fddf499
+        - sg-0feba4a6b37a55f89
       SubnetIds:
         - subnet-007314cfc0f3c0015
         - subnet-08cb884b95d9da694
