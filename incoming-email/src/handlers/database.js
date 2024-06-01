@@ -1,5 +1,5 @@
 import Knex from "knex";
-import {Model} from "objection";
+import { Model } from "objection";
 import {
 	SecretsManagerClient,
 	GetSecretValueCommand,
@@ -9,38 +9,39 @@ const client = new SecretsManagerClient({
 	region: "us-east-1",
 });
 
-let response = await client.send(new GetSecretValueCommand({
-	SecretId: "devDb",
-}));
+let response = await client.send(
+ new GetSecretValueCommand({
+	 SecretId: process.env.SECRET_NAME,
+ }),
+);
 
 const secret = JSON.parse(response.SecretString);
 
 const knex = Knex({
-	client: 'mysql2',
+	client: "mysql2",
 	useNullAsDefault: true,
 	connection: {
-		host: secret.host,
-		port: secret.port,
+		host: process.env.DB_HOST,
+		port: process.env.DB_PORT,
 		user: secret.username,
 		password: secret.password,
-		database: 'dmarc2',
-		timezone: '+00:00',
+		database: "dmarc2",
+		timezone: "+00:00",
 	},
-})
-Model.knex(knex)
+});
+Model.knex(knex);
 
 class Report extends Model {
 	static get tableName() {
-		return 'report';
+		return "report";
 	}
 }
 
 class Item extends Model {
 	static get tableName() {
-		return 'item';
+		return "item";
 	}
 }
 
-
-export {Report, Item}
-export default Model
+export { Report, Item };
+export default Model;
